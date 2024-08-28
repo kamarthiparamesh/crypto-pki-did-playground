@@ -1,0 +1,23 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "RsaSignature2018": "https://w3id.org/security#RsaSignature2018"
+    }
+  ],
+  "id": "did:web:localhost",
+  "publicKey": [
+    {
+      "id": "did:web:localhost#key-0",
+      "type": "RsaVerificationKey2018",
+      "controller": "did:web:localhost",
+      "publicKeyPem": "-----BEGIN PUBLIC KEY-----\r\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAplpdvU3cXaHAClVh3i+L\r\npCzoX+9sbIDIdSfFallLp4ozQQ3KYuuoYUm8tO0UD8/ZOxCuqgiZ49ai4WK6DawT\r\nmSJnjjFLuduWrzKszc4mEZ+m7xWnoQvvJU0zN+zoTpS3P4pPFs3muy2tR0pSD9+G\r\ng7k4aTsfuluhv/mATOhutlaRyD75+afTHtY15uHaiNwb+amZbsfEOnVo8mvNQhRc\r\nPOnVKCWecin7Tb0YsoMqKg32z8DKV210S5lyUvDw22o+9HTqG+3KsiDj8Yghmwji\r\n6HtfzCsgbu6rNcOFR4a36qGpjIGkLjX+ytn0TbMujrjCxki0rg9Eon8FM8GfYQ8G\r\n7wIDAQAB\r\n-----END PUBLIC KEY-----\r\n"
+    }
+  ],
+  "authentication": [
+    "did:web:localhost#key-0"
+  ],
+  "assertionMethod": [
+    "did:web:localhost#key-0"
+  ]
+}

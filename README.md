@@ -83,13 +83,14 @@ node jwt-verify.js
 
 # Generate Edwards-curve/Secp256k1 and then Sign & Verify the data
 
-There are many signature suites (https://w3c-ccg.github.io/ld-cryptosuite-registry/#signature-suites)[https://w3c-ccg.github.io/ld-cryptosuite-registry/#signature-suites]
+There are many signature suites https://w3c-ccg.github.io/ld-cryptosuite-registry/#signature-suites
 
-Few are Ed25519, RSA, Secp256k1, JWS, GPG, JCS Ed25519, BBS+ Signature 
+Few are Ed25519, RSA, Secp256k1, JWS, GPG, JCS Ed25519, BBS+ Signature
 
 1. Run the below command to generate keypair (`key-pair-private.json` & `key-pair.json`)
 
 Note: Open the terminal to directory `Ed25519` or `Secp256k1`
+
 ```
 node generator.js
 ```
@@ -124,9 +125,10 @@ node did-key-generator.js
 
 2. You can resolve the DID to its DID document (`did-document.json`)
 
-you can resolve online too : (https://dev.uniresolver.io/)[https://dev.uniresolver.io/]
+you can resolve online too : https://dev.uniresolver.io/
 
 Note: Change the hardcoded DID in the file with DID got from previous step before executing
+
 ```
 node did-key-resolver.js
 ```
@@ -149,6 +151,27 @@ node did-issue-verify-vc.js
 node did-issue-verify-vc.js
 ```
 
+# Generate did:web from the above RSA keypair
+
+1. Run the below command to generate DID Web document, which has to be hosted
+
+Note: Change the directory to `did-web`
+
+```
+node generate.js
+```
+
+2. Host the did web document in your server based on the did web path
+   e.g if did is `did:web:localhost` then path should be `https://localhost/.well-known/did.json`
+   e.g if did is `did:web:localhost:path1:path2` then path should be `https://localhost/path1/path2/did.json`
+   e.g if did is `did:web:example-domain.com:user:paramesh` then path should be `https://example-domain.com/user/paramesh/did.json`
+
+3. After hosting we can resolve the did web document using any library
+   Note: localhost / without https won't be resolved, it has to be https with valid domain which is publicly available
+
+```
+node resolve.js
+```
 
 # Test PEX
 
@@ -157,4 +180,3 @@ node did-issue-verify-vc.js
 ```
 node pex-test.js
 ```
-
