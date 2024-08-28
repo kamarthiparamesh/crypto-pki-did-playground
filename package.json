@@ -1,0 +1,27 @@
+{
+  "name": "meetup-aug29",
+  "version": "1.0.0",
+  "description": "```\r openssl genpkey -algorithm RSA -out ./keys/private_key.pem -pkeyopt rsa_keygen_bits:2048\r ```",
+  "main": "sign_using_rsa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@affinidi/common": "^4.3.3",
+    "@digitalbazaar/ed25519-signature-2020": "^5.4.0",
+    "@digitalbazaar/ed25519-verification-key-2020": "^4.1.0",
+    "@digitalbazaar/vc": "^7.0.0",
+    "@sphereon/pex": "^4.1.0",
+    "crypto-ld": "^3.9.0",
+    "did-method-key": "^0.7.0",
+    "ecdsa-secp256k1-signature-2019": "^1.0.1",
+    "jsonld-signatures": "^7.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "key-did-resolver": "^4.0.0",
+    "secp256k1-key-pair": "^1.1.0"
+  }
+}

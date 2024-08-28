@@ -1,0 +1,12 @@
+sign-verify/*.pem
+sign-verify/signature.txt
+package-lock.json
+node_modules
+
+.vscode
+bkp
+
+**/keys/*
+**/resources/*
+!**/resources/data.txt
+
